@@ -1,45 +1,108 @@
-# [PC电脑梯子推荐]三款免费好用的电脑梯子软件，确保PC电脑和手机稳定、高速科学上网
+# googlehosts
 
-免费电脑梯子一直备受关注，尽管手机日渐普及，但电脑仍是不可或缺的工作工具。今天，我向大家推荐三款同时适用于[PC电脑和手机的免费梯子软件](https://github.com/can-vpn/vpn-tiizi)，
-每款都经过了实际测试，性能出色。如果你正在寻找一款稳定免费的[电脑梯子软件](https://appletalking.cc/archives/2106)，不妨从以下选择中挑选一款试试。
+### 本项目已放弃曾用域名googlehosts.org，请小心他人将域名用于制作钓鱼网站。
 
-### 1.DOVE机场加速器（免费的PC电脑和手机外网梯子）
-### [官网地址](https://dove8.cc/a.php?alavBTtF8UB)
+### Windows 修改 Hosts 方法
 
-提供丰富的套餐配置选择，满足大部分科学上网者不同的应用场景需求；也满足不同用户使用，如：电子商务直播卖货，个人游戏娱乐使用。
+#### 1.打开 Hosts 文件
 
-有全球节点选择，解锁ChatGPT，Youtue，facebook，,推特（X），网飞（netflix)，Disney+，TikTok等流媒体不卡顿4K观看。
+按 Win + R，输入 C:\Windows\System32\drivers\etc\hosts，回车。
 
-不管是手机还是pc电脑都可以使用这款梯子机场，不限制设备使用
+选择 记事本 或 Notepad++ 作为编辑器。
 
-DOVE加速器是一款基于云计算的综合性加速翻墙梯子平台，旨在帮助企业和开发者在数字产品的开发、测试和部署过程中实现更高
-的效率和更快的响应速度。它融合了最新的lash/Shadowrocket/V2Ray技术，如人工智能GPT、机器学习和数据分析，为用户提供全面
-的支持和优化方案。
+#### 2.添加 Google Hosts 解析
 
-### 价格表：
+在文件底部添加类似以下内容（具体 IP 地址需自行查找最新的）：
 
-![2024-07-15 11 01 01](https://github.com/user-attachments/assets/5abb21af-0e5d-44d2-8ead-d2120642500c)
+142.250.190.14 www.google.com
+142.250.190.14 google.com
+142.250.190.14 www.google.com.hk
 
-### 2.PureVPN —— 便宜性价比高的机场梯子
+#### 3.保存文件
 
-解锁流媒体是PureVPN的强项，虽然整体带宽不大，但得益于延迟较低和Streaming视频流媒体模式，
-因此可以提供良好的高清视频播放体验。除了能帮助中国用户观看YouTube之外，还能解锁BBC iPlayer、Hulu、HBO、Amazon Prime Video等视频网站，
-以及解锁UFC、MLB等体育赛事和Peacock TV等体育频道。
+由于 Hosts 受系统保护，需 管理员权限 保存。
 
-全球78多个国家/地区的6500多个快速的VPN服务器可以满足你特殊需求，服务器数量方面名列VPN排行榜首。服务器在北美、欧洲、亚洲、中美洲、南美洲、大洋洲和非洲均有节点。
+可在 记事本 以“管理员身份运行”方式打开 Hosts 文件再编辑。
 
-### 3.Surfshark —— 不限设备数量的梯子加速器
+#### 4.清除 DNS 缓存
 
-在65个国家拥有超过3200台服务器，遍布欧洲、南美洲和北美洲、中东与非洲、亚太区，
-可以提供实际和虚拟位置，近距离中国VPN服务器包括日本、韩国、台湾、新加坡、澳门、香港等。
+按 Win + R，输入 cmd，回车。
 
-Surfshark为中国用户提供访问Facebook、Twitter、Instagram、YouTube、Reddit的能力，
-解锁Netflix、Disney+、BBC iPlayer、Hulu、HBO等国外流媒体速度也是一流。
+在命令提示符窗口中输入：
 
-客户端VPN支持macOS、Windows、Linux、iOS、Android以及Firefox和Chrome浏览器插件，
-不管是手机、平板还是笔记本电脑都能很好用。唯一的缺点是，Surfshark上不提供路由器VPN支持。
+ipconfig /flushdns
 
-以上三款免费电脑梯子都是小编亲自使用过的，价格和性能都有所差异，选择适合自己的梯子，保证你的上网体验更加安心。
+这样就可以使修改的 Hosts 立即生效。
+
+### Mac 修改 Hosts 方法
+
+#### 1.打开终端
+
+Command + 空格 搜索 Terminal 并打开。
+
+编辑 Hosts 文件
+
+#### 2.在终端输入：
+
+sudo nano /etc/hosts
+
+输入管理员密码后，进入 Nano 编辑器。
+
+#### 3.添加 Google Hosts
+
+在文件底部添加：
+
+142.250.190.14 www.google.com
+142.250.190.14 google.com
+
+#### 4.保存修改
+
+按 Control + X 退出，按 Y 保存，然后按 Enter 确认。
+
+刷新 DNS 缓存
+
+#### 5.在终端输入：
+
+sudo killall -HUP mDNSResponder
+
+### Linux 修改 Hosts 方法
+
+#### 1.打开终端
+
+#### 2.编辑 Hosts 文件
+
+输入：
+sudo nano /etc/hosts
+
+#### 3.添加 Google Hosts
+
+142.250.190.14 www.google.com
+142.250.190.14 google.com
+
+#### 4.保存并刷新 DNS
+
+Control + X 退出，Y 保存。
+
+刷新 DNS：
+
+sudo systemctl restart nscd
+
+### 注意事项
+#### 1.获取最新 IP
+
+Google 的 IP 可能会变化，可以使用 ping 命令获取：
+
+ping www.google.com
+
+或者使用第三方网站查询可用 Google IP。
+
+#### 2.Hosts 方法可能失效
+
+由于 Google 可能屏蔽 IP，Hosts 方式并不一定能稳定使用，建议使用 VPN 或代理工具。
+
+#### 3.慎用公共 Hosts
+
+从网上找的 Hosts 可能被篡改，建议自行测试有效 IP 以确保安全。
 
 
 
